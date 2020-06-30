@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Glória</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery/jquery-3.4.1.js"></script>
+	<script src="../js/jquery/jquery.hideseek.js"></script>
+	<script src="../js/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/favoritas.js"></script>
+	
+	<style type="text/css">
+     dl, ol, ul {
+     margin-left: -35px;
+		}
+	</style>
+	
+  </head>
+  <body>
+    
+	<br>
+	<div class="row">
+		<div class="col-8"><input class="form-control" name="search" id="search" type="text" placeholder="Busca..." data-list=".list"></div>
+		<div class="col-4"><button type="button" class="btn btn-dark" onClick="history.go(-1)" value="voltar">Voltar</button></div>
+	</div>
+	<br>
+    
+	<ul class="list" id="list">
+		<li class="list-group-item active">Músicas - Glória</li>
+		<li class="list-group-item"><a id="m_40" href="musica.html?40">Aleluia, Glória ao Senhor!</a><img id="40" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_41" href="musica.html?41">Cantemos glória - Padre Lindomar Lopes</a><img id="41" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_42" href="musica.html?42">Canto das Criaturas</a><img id="42" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_338" href="musica.html?338">Glória - Louvores a Deus</a><img id="338" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_43" href="musica.html?43">Glória a Deus na imensidão</a><img id="43" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_44" href="musica.html?44">Glória a Deus na Trindade (Este Hino de Louvor)</a><img id="44" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_45" href="musica.html?45">Glória a Deus nas Alturas - Eliana Ribeiro</a><img id="45" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_46" href="musica.html?46">Glória a Deus nas alturas Glória, Glória aleluia</a><img id="46" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_47" href="musica.html?47">Glória a Deus no Céu</a><img id="47" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_48" href="musica.html?48">Glória a Deus no imenso azul do céu</a><img id="48" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_49" href="musica.html?49">Glória a Deus nos altos céus</a><img id="49" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_50" href="musica.html?50">Glória a Deus Pai eu canto</a><img id="50" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_51" href="musica.html?51">Glória ao Pai – Banda de Fátima</a><img id="51" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_52" href="musica.html?52">Glória ao Pai criador</a><img id="52" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_53" href="musica.html?53">Glória, Glória Aleluia</a><img id="53" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_54" href="musica.html?54">Glória, Glória Anjos do céu</a><img id="54" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+	</ul>
+	<script>
+		  $(document).ready(function() {
+			$('#search').hideseek({
+			nodata: 'Nenhuma Música encontrada.',
+			hidden_mode: false,
+			ignore_accents: true
+			});
+		 });
+	</script>
+  </body>
+</html>

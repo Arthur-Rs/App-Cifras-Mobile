@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Espírito Santo</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery/jquery-3.4.1.js"></script>
+	<script src="../js/jquery/jquery.hideseek.js"></script>
+	<script src="../js/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/favoritas.js"></script>
+	
+	<style type="text/css">
+     dl, ol, ul {
+     margin-left: -35px;
+		}
+	</style>
+	
+  </head>
+  <body>
+    
+	<br>
+	<div class="row">
+		<div class="col-8"><input class="form-control" name="search" id="search" type="text" placeholder="Busca..." data-list=".list"></div>
+		<div class="col-4"><button type="button" class="btn btn-dark" onClick="history.go(-1)" value="voltar">Voltar</button></div>
+	</div>
+	<br>
+    
+	<ul class="list" id="list">
+		<li class="list-group-item active">Músicas - Espírito Santo</li>
+		<li class="list-group-item"><a id="m_252" href="musica.html?252">Batiza-me Senhor</a><img id="252" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_253" href="musica.html?253">Conheço um Coração</a><img id="253" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_342" href="musica.html?342">Corsa - Pe. Marcelo</a><img id="342" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_254" href="musica.html?254">Eu navegarei</a><img id="254" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_255" href="musica.html?255">Incendeia Minha Alma - Pe. Fábio de Melo</a><img id="255" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_256" href="musica.html?256">Obra Nova</a><img id="256" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_400" href="musica.html?400">Onde o Espírito de Deus está - Colo de Deus</a><img id="400" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_371" href="musica.html?371">Queima de Novo - Tony Allyson</a><img id="371" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_257" href="musica.html?257">Quero mergulhar nas profundezas</a><img id="257" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_258" href="musica.html?258">Vem, vem, vem Espírito Santo</a><img id="258" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_259" href="musica.html?259">Vento do Espírito</a><img id="259" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_260" href="musica.html?260">Vinde Espírito Santo</a><img id="260" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+	</ul>
+	<script>
+		  $(document).ready(function() {
+			$('#search').hideseek({
+			nodata: 'Nenhuma Música encontrada.',
+			hidden_mode: false,
+			ignore_accents: true
+			});
+		 });
+	</script>
+  </body>
+</html>

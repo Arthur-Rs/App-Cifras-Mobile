@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Santo</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery/jquery-3.4.1.js"></script>
+	<script src="../js/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/jquery/jquery.hideseek.js"></script>
+	<script src="../js/favoritas.js"></script>
+	
+	<style type="text/css">
+     dl, ol, ul {
+     margin-left: -35px;
+		}
+	</style>
+	
+  </head>
+  <body>
+    
+	<br>
+	<div class="row">
+		<div class="col-8"><input class="form-control" name="search" id="search" type="text" placeholder="Busca..." data-list=".list"></div>
+		<div class="col-4"><button type="button" class="btn btn-dark" onClick="history.go(-1)" value="voltar">Voltar</button></div>
+	</div>
+	<br>
+    
+	<ul class="list" id="list">
+		<li class="list-group-item active">Músicas - Santo</li>
+		<li class="list-group-item"><a id="m_110" href="musica.html?110">Dai-vos Graças ao Senhor – Banda de Fátima</a><img id="110" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_111" href="musica.html?111">Eu Celebrarei</a><img id="111" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_112" href="musica.html?112">Hosana ao nosso Rei</a><img id="112" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_113" href="musica.html?113">Hosana hei, Hosana ha</a><img id="113" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_114" href="musica.html?114">O Senhor é Santo, O Senhor é nosso Deus</a><img id="114" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_115" href="musica.html?115">Santo - Padre Cleidimar Moreira</a><img id="115" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_116" href="musica.html?116">Santo dos Anjos</a><img id="116" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_117" href="musica.html?117">Santo é o Senhor, Deus do Universo</a><img id="117" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_118" href="musica.html?118">Santo Quaresmal</a><img id="118" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_119" href="musica.html?119">Santo, Cheios da Vossa Glória</a><img id="119" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_120" href="musica.html?120">Santo, Santo, Santo é o Senhor</a><img id="120" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_390" href="musica.html?390">Santo - Senhor Deus do Universo</a><img id="390" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+	</ul>
+	<script>
+		  $(document).ready(function() {
+			$('#search').hideseek({
+			nodata: 'Nenhuma Música encontrada.',
+			hidden_mode: false,
+			ignore_accents: true
+			});
+		 });
+	</script>
+  </body>
+</html>

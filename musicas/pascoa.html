@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Páscoa</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery/jquery-3.4.1.js"></script>
+	<script src="../js/jquery/jquery.hideseek.js"></script>
+	<script src="../js/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/favoritas.js"></script>
+	
+	<style type="text/css">
+     dl, ol, ul {
+     margin-left: -35px;
+		}
+	</style>
+	
+  </head>
+  <body>
+    
+	<br>
+	<div class="row">
+		<div class="col-8"><input class="form-control" name="search" id="search" type="text" placeholder="Busca..." data-list=".list"></div>
+		<div class="col-4"><button type="button" class="btn btn-dark" onClick="history.go(-1)" value="voltar">Voltar</button></div>
+	</div>
+	<br>
+    
+	<ul class="list" id="list">
+		<li class="list-group-item active">Músicas - Páscoa</li>
+		<li class="list-group-item"><a id="m_301" href="musica.html?301">Cantai, cristãos, afinal</a><img id="301" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_302" href="musica.html?302">Ó morte, onde está tua vitória</a><img id="302" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_303" href="musica.html?303">Porque Ele vive</a><img id="303" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_304" href="musica.html?304">Ressuscitou, Aleluia</a><img id="304" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_305" href="musica.html?305">Senhor, vencestes a morte</a><img id="305" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_306" href="musica.html?306">Vendo Jesus Aparecer</a><img id="306" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+	</ul>
+	<script>
+		  $(document).ready(function() {
+			$('#search').hideseek({
+			nodata: 'Nenhuma Música encontrada.',
+			hidden_mode: false,
+			ignore_accents: true
+			});
+		 });
+	</script>
+  </body>
+</html>

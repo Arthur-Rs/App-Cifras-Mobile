@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <title>Cifras Católicas Offline</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<script src="js/jquery/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/bootstrap/bootstrap.js"></script>
+	<script src="js/jquery/popper.min.js"></script>
+	<script src="js/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-1.6.0.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+        window.plugins.insomnia.keepAwake();
+		// Now safe to use the Cordova API
+    }
+
+    </script>
+	
+  </head>
+  <body onload="onLoad()">
+  
+  
+  <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <img src="imagens/arrow-left-solid.svg" width="30px" height="30px">
+            </div>
+
+            <div class="sidebar-header">
+                <img src="imagens/logo_cifras.png">
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                <li>
+					<a href="#"><img src="imagens/home.png" width="18px" height="18px"> Home</a>
+                    <a href="#"><img src="imagens/playlist.png" width="18px" height="18px"> Minhas Playlists (Breve)</a>
+					<a target="blank_" href="https://docs.google.com/forms/d/e/1FAIpQLScoMlC6lLdEXAJfPu65eexz_SXBdg98-QyPvfisZiEXvCin6Q/viewform"><img src="imagens/upload.png" width="18px" height="18px"> Enviar Cifra (Online)</a>
+					<a href="https://chat.whatsapp.com/J2jhGBNER1VJoWITxyjJDT" target="blank_"><img src="imagens/whats.png" width="18px" height="18px"> Grupo do Whatsapp</a>
+					<a href="https://chat.whatsapp.com/GlbGPJoJu9F8BAQtCgn2bK" target="blank_"><img src="imagens/whats.png" width="18px" height="18px"> Grupo do Whatsapp 2</a>
+					<a href="https://t.me/joinchat/QiUMJhvTPLMnqRpubOSP1g" target="blank_"><img src="imagens/telegram.png" width="18px" height="18px"> Grupo do Telegram</a>
+					<a href="http://www.grupodecantonsa.net/appcifras" target="blank_"><img src="imagens/web.png" width="18px" height="18px"> Versão Web do APP</a>
+					<a href="sobre.html"><img src="imagens/sobre.png" width="18px" height="18px"> Sobre</a>
+					<a href="versao.html"><img src="imagens/versao.png" width="18px" height="18px"> Versão</a>
+                </li>
+				
+            </ul>
+			
+            <ul class="list-unstyled CTAs">
+				<li>
+                    <p>Contamos com sua doação para manter o Aplicativo! <a href="https://pagamento.gerencianet.com.br/botao-de-pagamento/53d72edb-cd6e-47ba-93b5-f17c9433e107" target="_blank"><img src="imagens/btn_doar.png"></a></p>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.mliellweb.cifrascatolicasoffline" target="_blank" class="download"><img src="imagens/estrela_dourada.png" width="18px" height="18px"> Avalie o Aplicativo na Google Play</a>
+                </li>
+            </ul>
+        </nav>
+  
+	<div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu do Aplicativo</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                </div>
+            </nav>
+  
+    <br>
+    <p>Utilize o Menu para mais informações... Se puder faça uma doação para manter o Aplicativo!   <a href="https://pagamento.gerencianet.com.br/botao-de-pagamento/53d72edb-cd6e-47ba-93b5-f17c9433e107" target="_blank"><img src="imagens/btn_doar.png"></a></p>
+
+	<ul class="list-group">
+		<a href="favoritas.html"><li class="list-group-item list-group-item-primary">Cifras Favoritas</li></a>
+		<a href="musicas/todos.html"><li class="list-group-item list-group-item-primary">Todas as Cifras</li></a>
+		<li class="list-group-item"></li>
+		<li class="list-group-item active">Cantos para Missa</li>
+		<a href="musicas/entrada.html"><li class="list-group-item">Entrada</li></a>
+		<a href="musicas/atopenitencial.html"><li class="list-group-item">Ato Penitencial</li></a>
+		<a href="musicas/gloria.html"><li class="list-group-item">Glória</li></a>
+		<a href="musicas/biblia.html"><li class="list-group-item">Bíblia</li></a>
+		<a href="musicas/salmo.html"><li class="list-group-item">Salmo Responsorial</li></a>
+		<a href="musicas/aclamacao.html"><li class="list-group-item">Aclamação</li></a>
+		<a href="musicas/ofertorio.html"><li class="list-group-item">Ofertório</li></a>
+		<a href="musicas/santo.html"><li class="list-group-item">Santo</li></a>
+		<a href="musicas/painosso_paz_cordeiro.html"><li class="list-group-item">Pai Nosso, Paz e Cordeiro</li></a>
+		<a href="musicas/comunhao.html"><li class="list-group-item">Comunhão</li></a>
+		<a href="musicas/acao_de_gracas.html"><li class="list-group-item">Ação de Graças</li></a>
+		<a href="musicas/final.html"><li class="list-group-item">Final</li></a>
+		<li class="list-group-item active">Cantos (Momentos Especiais)</li>
+		<a href="musicas/adoracao.html"><li class="list-group-item">Adoração</li></a>
+		<a href="musicas/diversos.html"><li class="list-group-item">Diversos</li></a>
+		<a href="musicas/espirito_santo.html"><li class="list-group-item">Espírito Santo</li></a>
+		<a href="musicas/familia.html"><li class="list-group-item">Família</li></a>
+		<a href="musicas/maria.html"><li class="list-group-item">Maria</li></a>
+		<a href="musicas/pascoa.html"><li class="list-group-item">Páscoa</li></a>
+		<li class="list-group-item active">Datas Especiais</li>
+		<a href="musicas/advento_natal.html"><li class="list-group-item">Advento e Natal</li></a>
+		<a href="musicas/campanha_fraternidade.html"><li class="list-group-item">Campanha da Fraternidade</li></a>
+		<a href="musicas/semana_santa_triduo_pascal.html"><li class="list-group-item">Semana Santa e Tríduo Pascal</li></a>
+	</ul>
+	
+	<div class="overlay"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+	
+  </body>
+  <script>
+		var admobid = {};
+		if( /(android)/i.test(navigator.userAgent) ) { 
+			admobid = { // for Android
+				banner: 'ca-app-pub-9479512003588235/6198900391',
+				interstitial: 'ca-app-pub-9479512003588235/6633224017'
+			};
+		} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+			admobid = { // for iOS
+				banner: 'ca-app-pub-9479512003588235/6198900391',
+				interstitial: 'ca-app-pub-9479512003588235/6633224017'
+			};
+		} else {
+			admobid = { // for Windows Phone
+				banner: 'ca-app-pub-9479512003588235/6198900391',
+				interstitial: 'ca-app-pub-9479512003588235/6633224017'
+			};
+		}
+
+		function initApp() {
+			if (AdMob) {
+				AdMob.createBanner({
+					adId : admobid.banner,
+					position : AdMob.AD_POSITION.BOTTOM_CENTER,
+					autoShow : true
+				});
+			}
+		}
+
+		document.addEventListener('deviceready', initApp, false);
+	</script>
+  
+</html>

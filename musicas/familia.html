@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Família</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery/jquery-3.4.1.js"></script>
+	<script src="../js/jquery/jquery.hideseek.js"></script>
+	<script src="../js/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/favoritas.js"></script>
+	
+	<style type="text/css">
+     dl, ol, ul {
+     margin-left: -35px;
+		}
+	</style>
+	
+  </head>
+  <body>
+    
+	<br>
+	<div class="row">
+		<div class="col-8"><input class="form-control" name="search" id="search" type="text" placeholder="Busca..." data-list=".list"></div>
+		<div class="col-4"><button type="button" class="btn btn-dark" onClick="history.go(-1)" value="voltar">Voltar</button></div>
+	</div>
+	<br>
+    
+	<ul class="list" id="list">
+		<li class="list-group-item active">Músicas - Família</li>
+		<li class="list-group-item"><a id="m_261" href="musica.html?261">É bom ter Família</a><img id="261" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_262" href="musica.html?262">Famílias do Brasil</a><img id="262" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_263" href="musica.html?263">Ilumina, Ilumina</a><img id="263" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_264" href="musica.html?264">Olhando a Sagrada Família</a><img id="264" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_265" href="musica.html?265">Oração da Família</a><img id="265" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_266" href="musica.html?266">Por Amor Deus fez homem e mulher</a><img id="266" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+		<li class="list-group-item"><a id="m_267" href="musica.html?267">Tua Família – Anjos de Resgate</a><img id="267" align="right" src="../imagens/estrela_dourada.png" width="15" title="Adicionar as Favoritas" onclick="adicionar_favoritos(this.id);"></li>
+	</ul>
+	<script>
+		  $(document).ready(function() {
+			$('#search').hideseek({
+			nodata: 'Nenhuma Música encontrada.',
+			hidden_mode: false,
+			ignore_accents: true
+			});
+		 });
+	</script>
+  </body>
+</html>

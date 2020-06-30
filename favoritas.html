@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Favoritas</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+   
+   </head>
+   
+   <body onload="mostra_favoritas();">
+	
+		
+	<script>
+	
+	var lixeira = "imagens/lixeira.png";	//caminho da imagem lixeira
+	
+	
+	
+	
+	function mostra_favoritas(){
+
+	var favoritas_armazenadas = localStorage.getItem('favoritas');			//busca todos os dados armazenados
+	var quebra_favoritas_armazenadas = favoritas_armazenadas.split("##");	//separa os dados de cada musica
+	
+	var remove_repetidas = quebra_favoritas_armazenadas.filter((este, i) => quebra_favoritas_armazenadas.indexOf(este) === i);
+	console.log(remove_repetidas);
+	
+	
+	var favoritas_ordem_alfabetica = remove_repetidas.sort();	//ordena as musicas em ordem alfabetica
+	var conta_elementos = quebra_favoritas_armazenadas.length;				//conta quantos musicas (elementos do array)
+	var resultado = "";														//declaração da variavel que armazenará todos os dados dividos
+	
+	for (var i = 1; i < conta_elementos; i++) {								//cria um loop dividindo as musicas adicionadas as favoritas
+	var ultimos_dados = resultado;											//busca os dados armazenados anteriormente
+	var quebra_informacoes = favoritas_ordem_alfabetica[i].split("&&");		//dividi as informações entre nome da musica e link para musica
+	var nome_musica = quebra_informacoes['2'];								//retorna o nome da musica
+	var link_musica = quebra_informacoes['1'];								//retorna o link da musica
+	var dados_atuais = "";													//declaração da variavel que irá montar a lista
+	var id_musica = quebra_informacoes['0'];								//retorna o id da musica
+	
+	var referencia_remover = "##" + id_musica + "&&" + link_musica + "&&" + nome_musica;
+		
+	if(nome_musica!=""){													//verifica primeiramente se existe musica para então montar a lista
+	dados_atuais = "<li class=\"list-group-item\"><a href=\"" + link_musica + "\">" + nome_musica + "</a><a onclick=\"remover_favoritas('" + referencia_remover + "');\" title\"Remover das Favoritas\"><img src=\"" + lixeira + "\" width=\"25\"></a></li>"; 	//monta o link e o nome da musica para visualização
+	}
+	else{
+	dados_atuais = "";														//se não existir musica retorna valor vazio
+	}
+	
+	resultado = ultimos_dados + dados_atuais;																		//adiciona o ultimo valor ao dados anteriores
+	document.getElementById("favoritas_armazenadas").innerHTML = resultado;											//mostra o resultado
+			
+	}
+
+	}
+		
+		
+		
+		
+	function remover_favoritas(ref){
+	
+	var favoritas_armazenadas = localStorage.getItem('favoritas');			//busca todos os dados armazenados
+	var removida = favoritas_armazenadas.replace(ref, "");					//nova variavel com a musica removida
+	localStorage.setItem("favoritas", removida);							//regrava os dados
+	document.getElementById("favoritas_armazenadas").innerHTML = "";	
+	mostra_favoritas();														//atualiza a visualização
+	}
+	
+	
+		
+	function limpar_todas(){
+	
+	localStorage.clear();
+	document.getElementById("favoritas_armazenadas").innerHTML = "";
+	
+	}
+	
+	
+	</script>
+	
+	
+	<br>
+	<div class="row">
+		<div class="col-8"><input class="form-control" id="filter" type="text" placeholder="Busca..."></div>
+		<div class="col-4"><button type="button" class="btn btn-dark" onClick="history.go(-1)" value="voltar">Voltar</button></div>
+	</div>
+    <br>
+	
+	
+		<ul class="list-group">
+		<li class="list-group-item active">
+		Favoritas
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp <a onclick="limpar_todas();" style="cursor: hand;">Limpar todas</a>
+		</li>
+				
+			<div id="favoritas_armazenadas"></div>
+	
+		</ul>
+		<script>
+		  $(document).ready(function(){
+		  $("#filter").on("keyup", function() {
+			var value = $(this).val().toLowerCase();
+			$("#list li").filter(function() {
+			  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			});
+		  });
+		});
+	</script>
+	</body>
+	</html>

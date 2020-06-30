@@ -1,0 +1,292 @@
+<html>
+  <head>
+    <title>Ação de Graças</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/jquery/jquery-3.4.1.js"></script>
+    <script src="../js/jquery/jquery.hideseek.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/favoritas.js"></script>
+
+    <style type="text/css">
+      dl,
+      ol,
+      ul {
+        margin-left: -35px;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <div class="row">
+      <div class="col-8">
+        <input
+          class="form-control"
+          name="search"
+          id="search"
+          type="text"
+          placeholder="Busca..."
+          data-list=".list"
+        />
+      </div>
+      <div class="col-4">
+        <button
+          type="button"
+          class="btn btn-dark"
+          onClick="history.go(-1)"
+          value="voltar"
+        >
+          Voltar
+        </button>
+      </div>
+    </div>
+    <br />
+
+    <ul class="list" id="list">
+      <li class="list-group-item active">Músicas - Ação de Graças</li>
+      <li class="list-group-item">
+        <a id="m_174" href="musica.html?174">A chave do Coração</a
+        ><img
+          id="174"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_399" href="musica.html?399">Amar-Te mais - Davidson Silva</a
+        ><img
+          id="399"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_175" href="musica.html?175"
+          >Anjo Guardião – Banda Canal da Graça</a
+        ><img
+          id="175"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_176" href="musica.html?176">Basta Querer – Pe. Marcelo Rossi</a
+        ><img
+          id="176"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_177" href="musica.html?177">Deus é Capaz (Pe. Fábio)</a
+        ><img
+          id="177"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_402" href="musica.html?402">Eu te Levantarei - Frei Gilson</a
+        ><img
+          id="402"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_178" href="musica.html?178">Força e Vitória – Eliana Ribeiro</a
+        ><img
+          id="178"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_179" href="musica.html?179">Jesus Manso e Humilde</a
+        ><img
+          id="179"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_180" href="musica.html?180">Jovem, te olho</a
+        ><img
+          id="180"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_181" href="musica.html?181">Livre Acesso</a
+        ><img
+          id="181"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_401" href="musica.html?401">Minha Essência - Thiago Brado</a
+        ><img
+          id="401"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_182" href="musica.html?182">Ninguém te ama como eu</a
+        ><img
+          id="182"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_183" href="musica.html?183">Noite Traiçoeira</a
+        ><img
+          id="183"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_184" href="musica.html?184">Obrigado Senhor</a
+        ><img
+          id="184"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_185" href="musica.html?185">Real em Mim - Rosa de Saron</a
+        ><img
+          id="185"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_186" href="musica.html?186"
+          >Recebe Adoração – Ministério Amor e Adoração</a
+        ><img
+          id="186"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_187" href="musica.html?187">Renova-me</a
+        ><img
+          id="187"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_188" href="musica.html?188">Sonda-me</a
+        ><img
+          id="188"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_189" href="musica.html?189">Te louvo em verdade</a
+        ><img
+          id="189"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_190" href="musica.html?190">Toca Senhor</a
+        ><img
+          id="190"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+      <li class="list-group-item">
+        <a id="m_191" href="musica.html?191">Tudo é do Pai</a
+        ><img
+          id="191"
+          align="right"
+          src="../imagens/estrela_dourada.png"
+          width="15"
+          title="Adicionar as Favoritas"
+          onclick="adicionar_favoritos(this.id);"
+        />
+      </li>
+    </ul>
+
+    <script>
+      $(document).ready(function () {
+        $("#search").hideseek({
+          nodata: "Nenhuma Música encontrada.",
+          hidden_mode: false,
+          ignore_accents: true,
+        });
+      });
+    </script>
+  </body>
+</html>
