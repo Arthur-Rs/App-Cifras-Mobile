@@ -1,0 +1,43 @@
+.list-group {
+  padding: 0 !important;
+  margin: 4vh 4vh 2vw 2vw !important;
+  width: 96vw !important;
+}
+
+.content {
+  display: flex !important;
+  flex-direction: column;
+  top: 0 !important;
+  left: 0 !important;
+  height: 7vh !important;
+
+  width: 100% !important;
+}
+
+.container-fluid {
+  margin: 0 !important;
+}
+
+.content nav {
+  height: 100%;
+  padding: 2%;
+}
+
+.content div {
+  display: flex;
+  margin-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.content div p {
+  width: 75%;
+}
+
+.content div img {
+  width: 200%;
+}
+
+.header {
+  display: flex !important;
+}

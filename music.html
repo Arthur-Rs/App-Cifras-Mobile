@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Detalhe da Música</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/global.css" />
+
+    <script type="text/javascript" src="./js/musicControl.js"></script>
+    <script type="text/javascript" src="./js/data/tones.js"></script>
+    <script type="text/javascript" src="./js/data/links.js"></script>
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/fontSize.js"></script>
+
+    <script type="text/javascript" src="./js/data/musics.js"></script>
+
+    <script src="./js/layout/sideBar.js"></script>
+    <script src="./js/layout/header.js"></script>
+  </head>
+  <body>
+    <script src="./js/init.js"></script>
+    <div>
+      <br />
+      <a href="javascript:mudaTamanho('texto', -1);">
+        <button type="button" class="btn btn-primary btn-sm">-</button>
+      </a>
+      <button type="button" class="btn btn-primary btn-sm">Texto</button>
+      <a href="javascript:mudaTamanho('texto', 1);">
+        <button type="button" class="btn btn-primary btn-sm">+</button>
+      </a>
+      <button
+        type="button"
+        class="btn btn-success btn-sm"
+        onclick="lessHalfTone()"
+      >
+        -1/2
+      </button>
+      <button type="button" class="btn btn-success btn-sm">Tom</button>
+      <button
+        type="button"
+        class="btn btn-success btn-sm"
+        onclick="plusHalfTone()"
+      >
+        +1/2</button
+      ><br /><br />
+      <button
+        type="button"
+        class="btn btn-danger btn-sm"
+        onclick="clearCiphers()"
+      >
+        Remover Acordes
+      </button>
+      <button
+        type="button"
+        class="btn btn-dark btn-sm"
+        onClick="history.go(-1)"
+        value="voltar"
+      >
+        Voltar</button
+      ><br />
+    </div>
+    <br />
+    <h4 id="titulo_Musica"></h4>
+    <br />
+    <div id="texto">
+      <pre id="texto_Musica"></pre>
+    </div>
+    <br />
+    <h6>Vídeo da Música (Requer conexão com a Internet)</h6>
+    <br />
+    <a id="link_music"></a>
+
+    <script src="./js/pages/music.js"></script>
+  </body>
+</html>

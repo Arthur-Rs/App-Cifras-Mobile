@@ -1,48 +1,38 @@
-/* Dom Ready */
-window.onDomReady = function dgDomReady(fn){
-	if(document.addEventListener)	//W3C
-		document.addEventListener("DOMContentLoaded", fn, false);
-} // Evitar problemas caso a váriavel seja declarada no "head"
+/* ============================================== *\
+ * @Title: Utils                                  *
+ * @Author: Arthur Reis <arthurreis074@gmail.com> *
+ * @Version: 1.0                                  *
+ * @Revision: 30/06/2020 											    *
+ * @Alert: Create by other author                 *
+ * @status: Modify                                *
+ * ============================================== */
 
-
-var musicControl = function(data) { // ----------------- Função principal
-		var musics; // ----- Seu JSON
-		var music;  // ----- Sua Musica
-		var id; // --------- O ID que vou receber do GET
-		musics = data["music_List"];
-		id = data["music_Id"];
-		
-		
-		for(i = 0; i < musics.length; i++) { // ------------------------ Percorre o seu JSON
-			
-			if (musics[i]["id"] == id) { // ------------------------------- Se o ID que peguei do GET for igual ao ID da musica que eu quero
-				music = musics[i];
-			}	
-		}
-		
-		
-		this.set(data["title_H4"],data["link_A"],data["content_Pre"], music); // ------- Faz as alterações na pagína ;D
-}
-
-musicControl.prototype = {
-	
-	titulo : document.createElement('title'),
-	linkVideo : document.createElement('a'),
-	conteudo : document.createElement('pre'),
-	
-	
-	set: function(title, linkA, content, musica) { // ------------------------------------------- define os elementos DOM a serem preenchidos
-			
-			this.titulo = title;
-			this.titulo.innerHTML = musica["name"];
-			
-			this.linkVideo = linkA;
-			this.linkVideo.innerHTML = musica["link"];
-			
-			this.conteudo = content;
-			this.conteudo.innerHTML = musica["conteudo"];
-		
-	},
-  
-
+window.onDomReady = function dgDomReady(fn) {
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", fn, false);
 };
+
+class musicControl {
+  constructor(data) {
+    this.id = data.music_Id;
+    this.music = musics.filter((music) => music.id === Number(this.id))[0];
+    this.data = data;
+
+    this.addMusicInDOM();
+  }
+
+  addMusicInDOM() {
+    this.title = document.createElement("title");
+    this.link = document.createElement("a");
+    this.content = document.createElement("pre");
+
+    this.title = this.data.title_H4;
+    this.title.innerHTML = this.music.name;
+
+    this.link = this.data.link_A;
+    this.link.innerHTML = this.music.link;
+
+    this.content = this.data.content_Pre;
+    this.content.innerHTML = this.music.conteudo;
+  }
+}
