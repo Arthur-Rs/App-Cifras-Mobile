@@ -1,103 +1,78 @@
 <html>
   <head>
     <title>Sobre o APP</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/sidebar.css">
-	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-	<script src="js/jquery/jquery-3.4.1.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-	<script src="js/bootstrap/bootstrap.js"></script>
-	<script src="js/jquery/popper.min.js"></script>
-	<script src="js/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="css/global.css" />
+
+    <script type="text/javascript" src="./js/musicControl.js"></script>
+    <script type="text/javascript" src="./js/data/tones.js"></script>
+    <script type="text/javascript" src="./js/data/links.js"></script>
+    <script src="./js/data/musics.js"></script>
+
+    <script src="./js/layout/sideBar.js"></script>
+    <script src="./js/layout/header.js"></script>
   </head>
   <body>
-  <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <img src="imagens/arrow-left-solid.svg" width="30px" height="30px">
-            </div>
-
-            <div class="sidebar-header">
-                <img src="imagens/logo_cifras.png">
-            </div>
-
-            <ul class="list-unstyled components">
-           
-                </li>
-                <li>
-					<a href="index.html"><img src="imagens/home.png" width="18px" height="18px"> Home</a>
-                    <a href="#"><img src="imagens/playlist.png" width="18px" height="18px"> Minhas Playlists (Breve)</a>
-					<a target="blank_" href="https://docs.google.com/forms/d/e/1FAIpQLScoMlC6lLdEXAJfPu65eexz_SXBdg98-QyPvfisZiEXvCin6Q/viewform"><img src="imagens/upload.png" width="18px" height="18px"> Enviar Cifra (Online)</a>
-					<a href="https://chat.whatsapp.com/J2jhGBNER1VJoWITxyjJDT" target="blank_"><img src="imagens/whats.png" width="18px" height="18px"> Grupo do Whatsapp</a>
-					<a href="https://chat.whatsapp.com/GlbGPJoJu9F8BAQtCgn2bK" target="blank_"><img src="imagens/whats.png" width="18px" height="18px"> Grupo do Whatsapp 2</a>
-					<a href="https://t.me/joinchat/QiUMJhvTPLMnqRpubOSP1g" target="blank_"><img src="imagens/telegram.png" width="18px" height="18px"> Grupo do Telegram</a>
-					<a href="http://www.grupodecantonsa.net/appcifras" target="blank_"><img src="imagens/web.png" width="18px" height="18px"> Versão Web do APP</a>
-					<a href="#"><img src="imagens/sobre.png" width="18px" height="18px"> Sobre</a>
-					<a href="versao.html"><img src="imagens/versao.png" width="18px" height="18px"> Versão</a>
-                </li>
-				
-            </ul>
-			
-            <ul class="list-unstyled CTAs">
-				<li>
-                    <p>Contamos com sua doação para manter o Aplicativo! <a href="https://pagamento.gerencianet.com.br/botao-de-pagamento/53d72edb-cd6e-47ba-93b5-f17c9433e107" target="_blank"><img src="imagens/btn_doar.png"></a></p>
-                </li>
-                <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.mliellweb.cifrascatolicasoffline" target="_blank" class="download"><img src="imagens/estrela_dourada.png" width="18px" height="18px"> Avalie o Aplicativo na Google Play</a>
-                </li>
-            </ul>
-        </nav>
-  
-	<div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
-                        <i class="fas fa-align-left"></i>
-                        <span>Menu do Aplicativo</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                </div>
-            </nav>
-    <br>
-	<h4>Cifras Católicas Offline</h4><br>
-	<p><b>Sobre o Aplicativo</b></p>
-    <p>O Aplicativo surgiu com a necessidade de juntar um grande repertório de músicas em um só lugar, digitalmente, que poderia ser acessado de Tablets ou Celulares, o que facilitaria muito os Grupos de Canto.</p>
-	<p>Com uma grande ajuda do João Paulo Chagas (Criador do <a href="https://play.google.com/store/apps/details?id=com.canticosliturgicos.com" target="_blank">App Cânticos Litúrgicos</a>), foi possível atualizar um script para fazer as mudanças de tons das músicas, ajudando assim ainda mais os músicos.</p>
-	<p>As músicas disponíveis no Aplicativo são baseadas do Site (<a href="http://www.grupodecantonsa.net" target="_blank">www.grupodecantonsa.net</a>) , o qual o mesmo será desativado em breve, e passaremos a atualizar somente o aplicativo.</p>
-	<p><b>O Aplicativo funciona totalmente Offline!</b> Somente para ver os vídeos é necessário conexão com a Internet</p>
-	<p>Para saber as modificações a cada atualização, basta acessar no menu o link Versões.</p>
-	<p>Quer falar conosco? Algum problema com Cifra? Quer enviar uma Cifra para disponibilizar no APP? Mande-nos um email para <a href="mailto:grupodecantonsa@gmail.com" target="_blank">grupodecantonsa@gmail.com</a> ou partitipe de nosso grupo no Whatsapp!</p>
-	<p>Lembrando que as músicas disponíveis no Aplicativo não são todas litúrgicas, então sempre procure saber antes se pode ou não cantar em determinado momento.</p>
-	<p>Lembrando que o aplicativo é totalmente gratuito mas temos algumas despesas e se for de bom coração pode nos ajudar doando R$ 15,00 através desse botão:  <a href="https://pagamento.gerencianet.com.br/botao-de-pagamento/53d72edb-cd6e-47ba-93b5-f17c9433e107" target="_blank"><img src="imagens/btn_doar.png"></a></p>
-	<p>Paz e Bem!</p>
-    
-	<div class="overlay"></div>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#sidebar").mCustomScrollbar({
-                theme: "minimal"
-            });
-
-            $('#dismiss, .overlay').on('click', function () {
-                $('#sidebar').removeClass('active');
-                $('.overlay').removeClass('active');
-            });
-
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').addClass('active');
-                $('.overlay').addClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
-    </script>
+    <script src="./js/init.js"></script>
+    <div class="text-conteiner">
+      <br />
+      <h4>Cifras Católicas Offline</h4>
+      <br />
+      <p><b>Sobre o Aplicativo</b></p>
+      <p>
+        O Aplicativo surgiu com a necessidade de juntar um grande repertório de
+        músicas em um só lugar, digitalmente, que poderia ser acessado de
+        Tablets ou Celulares, o que facilitaria muito os Grupos de Canto.
+      </p>
+      <p>
+        Com uma grande ajuda do João Paulo Chagas (Criador do
+        <a
+          href="https://play.google.com/store/apps/details?id=com.canticosliturgicos.com"
+          target="_blank"
+          >App Cânticos Litúrgicos</a
+        >), foi possível atualizar um script para fazer as mudanças de tons das
+        músicas, ajudando assim ainda mais os músicos.
+      </p>
+      <p>
+        As músicas disponíveis no Aplicativo são baseadas do Site (<a
+          href="http://www.grupodecantonsa.net"
+          target="_blank"
+          >www.grupodecantonsa.net</a
+        >) , o qual o mesmo será desativado em breve, e passaremos a atualizar
+        somente o aplicativo.
+      </p>
+      <p>
+        <b>O Aplicativo funciona totalmente Offline!</b> Somente para ver os
+        vídeos é necessário conexão com a Internet
+      </p>
+      <p>
+        Para saber as modificações a cada atualização, basta acessar no menu o
+        link Versões.
+      </p>
+      <p>
+        Quer falar conosco? Algum problema com Cifra? Quer enviar uma Cifra para
+        disponibilizar no APP? Mande-nos um email para
+        <a href="mailto:grupodecantonsa@gmail.com" target="_blank"
+          >grupodecantonsa@gmail.com</a
+        >
+        ou partitipe de nosso grupo no Whatsapp!
+      </p>
+      <p>
+        Lembrando que as músicas disponíveis no Aplicativo não são todas
+        litúrgicas, então sempre procure saber antes se pode ou não cantar em
+        determinado momento.
+      </p>
+      <p>
+        Lembrando que o aplicativo é totalmente gratuito mas temos algumas
+        despesas e se for de bom coração pode nos ajudar doando R$ 15,00 através
+        desse botão:
+        <a
+          href="https://pagamento.gerencianet.com.br/botao-de-pagamento/53d72edb-cd6e-47ba-93b5-f17c9433e107"
+          target="_blank"
+          ><img src="imagens/btn_doar.png"
+        /></a>
+      </p>
+      <p>Paz e Bem!</p>
+    </div>
+    <div class="overlay"></div>
   </body>
 </html>

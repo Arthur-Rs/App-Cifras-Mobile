@@ -15,7 +15,7 @@ const sideBarHTML = `
         <a href="${whatsappGroup_2}" target="blank_"><img src="images/whats.svg" width="18px" height="18px"> Grupo do Whatsapp 2</a>
         <a href="${telegramGroup}" target="blank_"><img src="images/telegram.png" width="18px" height="18px"> Grupo do Telegram</a>
         <a href=${web} target="blank_"><img src="images/web.png" width="18px" height="18px"> Versão Web do APP</a>
-        <a href="abault.html"><img src="images/sobre.png" width="18px" height="18px"> Sobre</a>
+        <a href="about.html"><img src="images/sobre.png" width="18px" height="18px"> Sobre</a>
         <a href="version.html"><img src="images/versao.png" width="18px" height="18px"> Versão</a>
       </li>
     </ul>

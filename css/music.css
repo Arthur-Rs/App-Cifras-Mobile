@@ -1,6 +1,6 @@
 .music-box-buttons {
   display: flex;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .music-box-buttons div {
@@ -18,4 +18,13 @@
   font-size: 24px;
   min-width: 5vw;
   margin: 0px 10px 0px 10px;
+}
+
+#texto_musica {
+  padding-left: 4px;
+}
+
+#texto_musica b {
+  padding-left: 4px;
+  color: var(--red);
 }

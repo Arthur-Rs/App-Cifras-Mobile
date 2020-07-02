@@ -1,10 +1,15 @@
-@import url('./list.css');
-@import url('./sidebar.css');
-@import url('./bootstrap.css');
-@import url('./popup.css');
-@import url('./music.css');
+@import url("./list.css");
+@import url("./sidebar.css");
+@import url("./bootstrap.css");
+@import url("./popup.css");
+@import url("./music.css");
 
 bory {
   display: flex;
   flex-direction: column;
+}
+
+.text-conteiner {
+  padding: 20px;
+  margin-top: 10px;
 }

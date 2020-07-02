@@ -2,12 +2,21 @@
   padding: 0 !important;
   margin: 4vh 4vh 2vw 2vw !important;
   width: 96vw !important;
-  margin-top: 5% !important;
+  margin-top: 3% !important;
 }
 
 .list-group-item {
   display: flex !important;
   justify-content: space-between !important;
+  color: #007bff;
+  cursor: pointer !important;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.list-group-item:hover {
+  color: #0056b3;
+  text-decoration: underline !important;
 }
 
 .list-group-item input {
@@ -21,7 +30,6 @@
   top: 0 !important;
   left: 0 !important;
   height: 7vh !important;
-
   width: 100% !important;
 }
 
@@ -44,11 +52,11 @@
 }
 
 .content div p {
-  width: 75%;
+  width: 80%;
 }
 
 .content div img {
-  width: 200%;
+  width: 120%;
 }
 
 .header {
@@ -64,9 +72,17 @@
 }
 
 .btn-all {
-  margin-right: 80%;
-  margin-top: 8%;
-  margin-left: 2%;
+  margin-right: 10%;
+  margin-top: 4%;
+  margin-left: 10%;
+  height: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active a {
+  color: white;
 }
 
 .icon-header {

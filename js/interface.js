@@ -34,8 +34,6 @@ const clearList = () => {
 
 // ==> Music
 const addMusicInDOM = (music, btnIcon = null, btnFun = null) => {
-  GLOBAL_MUSIC_ID_SELECTED = music.id;
-
   const newMusic = document.createElement("li");
   newMusic.classList.add("list-group-item");
 
@@ -104,8 +102,9 @@ const addGenericInDOM = (data = genericData, button = genericButton) => {
 
   generic.id = data.id;
 
-  const text = document.createElement("span");
+  const text = document.createElement("a");
   text.setAttribute("onclick", data.fun);
+  text.setAttribute("href", data.link);
   text.innerHTML = data.text;
   generic.append(text);
 
