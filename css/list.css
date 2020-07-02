@@ -2,6 +2,17 @@
   padding: 0 !important;
   margin: 4vh 4vh 2vw 2vw !important;
   width: 96vw !important;
+  margin-top: 5% !important;
+}
+
+.list-group-item {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.list-group-item input {
+  width: 18px !important;
+  height: 18px !important;
 }
 
 .content {
@@ -25,7 +36,9 @@
 
 .content div {
   display: flex;
-  margin-top: 20px;
+
+  margin-top: 1%;
+
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -40,4 +53,31 @@
 
 .header {
   display: flex !important;
+}
+
+.icon {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 5px !important;
+  width: 28px;
+}
+
+.btn-all {
+  margin-right: 80%;
+  margin-top: 8%;
+  margin-left: 2%;
+}
+
+.icon-header {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 5px !important;
+  height: 2.5vh;
+  width: 2.5vh;
+}
+
+.box-buttons {
+  margin: 0px !important;
 }

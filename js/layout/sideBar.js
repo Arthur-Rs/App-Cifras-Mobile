@@ -8,11 +8,11 @@ const sideBarHTML = `
     </div>
     <ul class="list-unstyled components"> 
       <li>
-        <a href="#"><img src="images/home.png" width="18px" height="18px"> Home</a>
-        <a href="#"><img src="images/playlist.png" width="18px" height="18px"> Minhas Playlists (Breve)</a>
+        <a href="index.html"><img src="images/home.png" width="18px" height="18px"> Home</a>
+        <a href="playlist.html"><img src="images/playlist.png" width="18px" height="18px"> Minhas Playlists </a>
         <a target="blank_" href="${addNewMusic}"><img src="images/upload.png" width="18px" height="18px"> Enviar Cifra (Online)</a>
-        <a href="${whatsappGroup_1}" target="blank_"><img src="images/whats.png" width="18px" height="18px"> Grupo do Whatsapp</a>
-        <a href="${whatsappGroup_2}" target="blank_"><img src="images/whats.png" width="18px" height="18px"> Grupo do Whatsapp 2</a>
+        <a href="${whatsappGroup_1}" target="blank_"><img src="images/whats.svg" width="18px" height="18px"> Grupo do Whatsapp</a>
+        <a href="${whatsappGroup_2}" target="blank_"><img src="images/whats.svg" width="18px" height="18px"> Grupo do Whatsapp 2</a>
         <a href="${telegramGroup}" target="blank_"><img src="images/telegram.png" width="18px" height="18px"> Grupo do Telegram</a>
         <a href=${web} target="blank_"><img src="images/web.png" width="18px" height="18px"> Versão Web do APP</a>
         <a href="abault.html"><img src="images/sobre.png" width="18px" height="18px"> Sobre</a>

@@ -1,29 +1,29 @@
-/* ============================================== *\
- * @Title: Utils                                  *
- * @Author: Arthur Reis <arthurreis074@gmail.com> *
- * @Version: 1.0                                  *
- * @Revision: 30/06/2020                          *
- * ============================================== */
-const returnBtn = document.querySelector("#return");
+/*
+ *@Author: Arthur Reis <arthurreis074@gmail.com>
+ *@Version: 1.1
+ *@Revision: 02/07/2020
+ */
 
 const drawTableByCategory = (category) => {
-  returnBtn.style.display = null;
+  visibleReturn();
+
   clearList();
   const musicsFilter = getSortByCategory(category);
 
-  addTitileInDOM(category);
+  addTitleInDOM(category);
   musicsFilter.forEach((music, index) => {
     addMusicInDOM(music);
   });
 };
 
 const drawTable = () => {
-  returnBtn.style.display = "none";
+  invisibleReturn();
+
   clearList();
   categories.forEach((category) => {
     addCategoryInDOM(category);
   });
 };
 
-returnBtn.addEventListener("click", () => drawTable());
+addCommandInReturn('drawTable()');
 drawTable();

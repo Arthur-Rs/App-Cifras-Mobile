@@ -1,10 +1,10 @@
-/* ============================================== *\
- * @Title: Utils                                  *
- * @Author: Arthur Reis <arthurreis074@gmail.com> *
- * @Version: 1.0                                  *
- * @Revision: 30/06/2020                          *
- * ============================================== */
+/*@ ============================================== *\
+ * @Author: Arthur Reis <arthurreis074@gmail.com>  *
+ * @Version: 1.0                                   *
+ * @Revision: 30/06/2020                           *
+\* =============================================  **/
 
+addCommandInReturn('goBack()');
 alphabet.forEach((letter) => {
   const sortMusics = getSortByLetter(letter);
   if (sortMusics.length !== 0) {

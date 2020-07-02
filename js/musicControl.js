@@ -1,11 +1,9 @@
-/* ============================================== *\
- * @Title: Utils                                  *
- * @Author: Arthur Reis <arthurreis074@gmail.com> *
- * @Version: 1.0                                  *
- * @Revision: 30/06/2020 											    *
- * @Alert: Create by other author                 *
- * @status: Modify                                *
- * ============================================== */
+/*
+ *@Author: unknown
+ *@ModifieBy: Arthur Reis <arthurreis074@gmail.com>
+ *@Version: 2.0
+ *@Revision: 30/07/2020
+ */
 
 window.onDomReady = function dgDomReady(fn) {
   if (document.addEventListener)

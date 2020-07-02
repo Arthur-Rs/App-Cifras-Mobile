@@ -1,3 +1,10 @@
-@import url("./list.css");
-@import url("./sidebar.css");
-@import url("./bootstrap.css");
+@import url('./list.css');
+@import url('./sidebar.css');
+@import url('./bootstrap.css');
+@import url('./popup.css');
+@import url('./music.css');
+
+bory {
+  display: flex;
+  flex-direction: column;
+}

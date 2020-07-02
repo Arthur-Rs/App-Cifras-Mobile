@@ -1,9 +1,9 @@
-/* ============================================== *\
- * @Title: Init                                   *
- * @Author: Arthur Reis <arthurreis074@gmail.com> *
- * @Version: 1.0                                  *
- * @Revision: 30/06/2020                          *
- * ============================================== */
+/*
+ *@Author: Arthur Reis <arthurreis074@gmail.com>
+ *@Version: 1.0
+ *@Revision: 30/06/2020
+ */
+
 const body = document.body;
 
 const sideBar = document.createElement("div");
