@@ -4,76 +4,95 @@
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
 
     <script type="text/javascript" src="./js/musicControl.js"></script>
     <script type="text/javascript" src="./js/data/tones.js"></script>
     <script type="text/javascript" src="./js/data/links.js"></script>
     <script src="./js/data/musics.js"></script>
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/interface.js"></script>
 
+    <script src="./js/layout/popup.js"></script>
     <script src="./js/layout/sideBar.js"></script>
     <script src="./js/layout/header.js"></script>
+
+    <style type="text/css">
+      pre {
+        white-space: pre-wrap;
+        padding: 5px;
+      }
+    </style>
   </head>
   <body>
-    <script src="./js/init.js"></script>
-    <div class="text-conteiner">
-      <div class="music-box-buttons">
-        <div>
-          <button
-            onclick="minusSizeFont()"
-            type="button"
-            class="btn btn-primary btn-sm"
-          >
-            -
-          </button>
-
-          <button type="button" class="btn btn-primary btn-sm">Texto</button>
-
-          <button
-            onclick="plusSizeFont()"
-            type="button"
-            class="btn btn-primary btn-sm"
-          >
-            +
-          </button>
-        </div>
-        <div>
-          <button
-            type="button"
-            class="btn btn-danger btn-sm"
-            onclick="clearCiphers()"
-          >
-            Remover Acordes
-          </button>
-        </div>
-        <div>
-          <button
-            type="button"
-            class="btn btn-success btn-sm"
-            onclick="lessHalfTone()"
-          >
-            -1/2
-          </button>
-          <button type="button" class="btn btn-success btn-sm">Tom</button>
-          <button
-            type="button"
-            class="btn btn-success btn-sm"
-            onclick="plusHalfTone()"
-          >
-            +1/2</button
-          ><br /><br />
-        </div>
-      </div>
-
+    <div align="center">
       <br />
-      <h4 id="titulo_Musica"></h4>
-      <br />
-      <div id="texto">
-        <pre id="texto_Musica"></pre>
-      </div>
-      <br />
-      <h6>Vídeo da Música (Requer conexão com a Internet)</h6>
-      <br />
+      <button
+        onclick="minusSizeFont()"
+        type="button"
+        class="btn btn-primary btn-sm"
+      >
+        -</button
+      >&nbsp;
+      <button type="button" class="btn btn-primary btn-sm">Texto</button>&nbsp;
+      <button
+        onclick="plusSizeFont()"
+        type="button"
+        class="btn btn-primary btn-sm"
+      >
+        +
+      </button>
+      &nbsp;&nbsp;&nbsp;
+      <button
+        type="button"
+        class="btn btn-success btn-sm"
+        onclick="lessHalfTone()"
+      >
+        -1/2</button
+      >&nbsp;
+      <button type="button" class="btn btn-success btn-sm">Tom</button>&nbsp;
+      <button
+        type="button"
+        class="btn btn-success btn-sm"
+        onclick="plusHalfTone()"
+      >
+        +1/2</button
+      ><br /><br />
+      <button
+        type="button"
+        class="btn btn-primary btn-sm"
+        id="limpar"
+        onclick="addPopupPlaylist(musicId)"
+      >
+        Playlist</button
+      >&nbsp;
+      <button
+        type="button"
+        class="btn btn-danger btn-sm"
+        id="limpar"
+        onclick="clearCiphers()"
+      >
+        Remover Acordes</button
+      >&nbsp;
+      <button
+        type="button"
+        class="btn btn-dark btn-sm"
+        onClick="goBack()"
+        value="voltar"
+      >
+        Voltar</button
+      ><br />
     </div>
+    <br />
+    <h4 id="titulo_Musica"></h4>
+    <br />
+    <div id="texto">
+      <pre id="texto_Musica"></pre>
+    </div>
+    <br />
+    <h6>Vídeo da Música (Requer conexão com a Internet)</h6>
+    <br />
+
     <a id="link_music"></a>
 
     <script src="./js/utils.js"></script>

@@ -13,9 +13,20 @@ const getSortByCategory = (category) => {
   return musics.filter((music) => music.category === category);
 };
 
+const getSortByAlpahabet = (list) => {
+  return list.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+};
 // ==> Clear
 const clearCiphers = () => {
-  const ciphers = document.querySelectorAll('b');
+  const ciphers = document.querySelectorAll("b");
   ciphers.forEach((cipher) => {
     cipher.remove();
   });
@@ -29,24 +40,41 @@ const goBack = () => {
 
 // ==> headerButtons
 
-const returnBtn = document.querySelector('#return');
+const returnBtn = document.querySelector("#return");
 
 const invisibleReturn = () => {
-  returnBtn.style.display = 'none';
+  returnBtn.style.display = "none";
 };
 const visibleReturn = () => {
   returnBtn.style.display = null;
 };
 
+const invisibleSearch = () => {
+  searchBar.style.display = "none";
+};
+const visibleSearch = () => {
+  searchBar.style.display = null;
+};
+
 const addCommandInReturn = (command = String) => {
-  returnBtn.setAttribute('onclick', command);
+  returnBtn.setAttribute("onclick", command);
 };
 
 const clearCommands = () => {
-  playlistBtn.setAttribute('onclick', null);
-  returnBtn.setAttribute('onclick', null);
+  playlistBtn.setAttribute("onclick", null);
+  returnBtn.setAttribute("onclick", null);
 };
 
 const closePopup = () => {
-  document.querySelector('.popup').remove();
+  document.querySelector(".popup").remove();
+};
+
+// ==> Strings
+
+const treatedString = (text = String) => {
+  const parsed = text
+    .normalize("NFD")
+    .replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, "")
+    .toLowerCase();
+  return parsed;
 };

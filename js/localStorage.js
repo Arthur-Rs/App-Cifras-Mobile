@@ -6,8 +6,8 @@
 
 // ==== Playlist ==== \\
 
-const itemId = 'playlist';
-const defaultPlaylist = [{ name: 'Sua playlist', musicsId: [] }];
+const itemId = "playlist";
+const defaultPlaylist = [{ name: "Sua playlist", musicsId: [] }];
 let playlist = [];
 
 // ==> LocalStorage Controller
@@ -36,16 +36,22 @@ const refreshMusicPlaylist = (id) => {
 };
 
 const createNewPlaylist = (id) => {
-  const name = prompt('Escolha o nome da playlist: ');
+  const name = prompt("Escolha o nome da playlist: ");
   playlist.push({ name, musicsId: [] });
-  refreshPlaylist(id);
+  try {
+    drawPlaylist();
+  } catch (error) {}
+  try {
+    refreshPlaylist(id);
+  } catch (error) {}
+
   setPlaylist();
 };
 
 const addInPlaylist = (idlist, idmusic) => {
   const checkingIdMusic = playlist[idlist].musicsId.indexOf(idmusic) !== -1;
   if (checkingIdMusic) {
-    alert('Essa música já esta na playlist!');
+    alert("Essa música já esta na playlist!");
     return;
   }
   playlist[idlist].musicsId.push(idmusic);

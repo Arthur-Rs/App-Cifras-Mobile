@@ -16,7 +16,7 @@
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
-  
+
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #007bff;
@@ -2469,7 +2469,7 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn {
-  display: flex;
+
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
@@ -5392,7 +5392,7 @@ input[type="button"].btn-block {
 
 .list-group-item {
   position: relative;
-  display: block;
+  display: flex;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;

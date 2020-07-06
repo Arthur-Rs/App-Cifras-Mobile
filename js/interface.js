@@ -25,6 +25,7 @@ const genericButton = {
 //  ===== DOM Manipulation ===== \\
 
 const list = document.querySelector("#list");
+const searchBar = document.querySelector("#search");
 
 // ==> Clear
 
@@ -33,13 +34,24 @@ const clearList = () => {
 };
 
 // ==> Music
-const addMusicInDOM = (music, btnIcon = null, btnFun = null) => {
+const addMusicInDOM = (
+  music,
+  btnIcon = null,
+  btnFun = null,
+  category = false
+) => {
   const newMusic = document.createElement("li");
   newMusic.classList.add("list-group-item");
 
+  const box = document.createElement("div");
+
   const linkMusic = document.createElement("a");
   linkMusic.setAttribute("href", `./music.html?${music.id}`);
+  linkMusic.setAttribute("id", music.id);
   linkMusic.innerHTML = music.name;
+
+  const categoryMusic = document.createElement("span");
+  categoryMusic.innerHTML = music.category;
 
   const iconName = btnIcon ? btnIcon : "add";
   const iconFunction = btnFun ? btnFun : `addPopupPlaylist(${music.id})`;
@@ -50,7 +62,14 @@ const addMusicInDOM = (music, btnIcon = null, btnFun = null) => {
   icon.setAttribute("alt", "add");
   icon.setAttribute("onclick", iconFunction);
 
-  newMusic.appendChild(linkMusic);
+  if (category) {
+    box.append(linkMusic);
+    box.append(categoryMusic);
+    newMusic.appendChild(box);
+  } else {
+    newMusic.appendChild(linkMusic);
+  }
+
   newMusic.appendChild(icon);
   list.appendChild(newMusic);
 };
@@ -76,40 +95,42 @@ const addTitleInDOM = (text) => {
 };
 
 // ==> Category
-const addCategoryInDOM = (categories) => {
+
+const addCategoryInDOM = (categories, id) => {
   categories.forEach((category, index) => {
-    const fun = `drawTableByCategory("${category}")`;
-    const newLetter = document.createElement("li");
+    const address = `category.html?${id},${index}`;
+    const item = document.createElement("li");
 
-    newLetter.classList.add("list-group-item");
-    index === 0 && newLetter.classList.add("active");
-    index !== 0 && newLetter.setAttribute("onclick", fun);
+    item.classList.add("list-group-item");
+    index === 0 && item.classList.add("active");
 
-    newLetter.innerHTML = category;
+    const link = document.createElement("a");
+    index !== 0 && link.setAttribute("href", address);
+    link.innerHTML = category;
 
-    list.appendChild(newLetter);
+    item.append(link);
+    list.appendChild(item);
   });
 };
 
-// ==>
+// ==> Generic
 
 const addGenericInDOM = (data = genericData, button = genericButton) => {
   const generic = document.createElement("li");
 
   generic.classList.add("list-group-item");
 
-  generic.classList.add(data.classList);
+  generic.classList.add(data._class);
 
   generic.id = data.id;
 
   const text = document.createElement("a");
-  text.setAttribute("onclick", data.fun);
-  text.setAttribute("href", data.link);
+  text.setAttribute("onclick", data.fun ? data.fun : "");
+  text.setAttribute("href", data.link ? data.link : "#");
   text.innerHTML = data.text;
   generic.append(text);
 
   if (button.img) {
-    debugger;
     const btn = document.createElement("img");
     btn.classList.add(button._class);
     btn.setAttribute("onclick", button.fun);

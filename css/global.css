@@ -2,14 +2,32 @@
 @import url("./sidebar.css");
 @import url("./bootstrap.css");
 @import url("./popup.css");
-@import url("./music.css");
+
 
 bory {
   display: flex;
   flex-direction: column;
 }
 
+.search {
+  height: 42px%;
+  width: 97%;
+  padding-left: 2%;
+  border: 2px solid var(--primary);
+  font-size: 120%;
+  margin: 9vh 0px -2vw 2vw !important;
+}
+input:active {
+  outline: none;
+}
 .text-conteiner {
-  padding: 20px;
-  margin-top: 10px;
+  padding: 2px;
+  margin-top: 1px;
+}
+
+h4 {
+  color: var(--blue);
+}
+b {
+  color: var(--red);
 }

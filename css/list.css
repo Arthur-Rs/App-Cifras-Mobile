@@ -6,7 +6,7 @@
 }
 
 .list-group-item {
-  display: flex !important;
+  display: flex;
   justify-content: space-between !important;
   color: #007bff;
   cursor: pointer !important;
@@ -14,9 +14,24 @@
   -webkit-text-decoration-skip: objects;
 }
 
+.list-group-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-item div span {
+  color: var(--gray);
+  font-size: 14px;
+  text-decoration: none !important;
+}
+
+.list-group-item div span:hover {
+  text-decoration: none !important;
+}
+
 .list-group-item:hover {
   color: #0056b3;
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 .list-group-item input {
@@ -90,8 +105,8 @@
   align-items: center !important;
   justify-content: center !important;
   margin-left: 5px !important;
-  height: 2.5vh;
-  width: 2.5vh;
+  height: 5.5vh;
+  width: 8.5vh;
 }
 
 .box-buttons {

@@ -4,43 +4,13 @@
  *@Revision: 02/07/2020
  */
 
-const drawTableByCategory = (category) => {
-  visibleReturn();
-
-  clearList();
-  const musicsFilter = getSortByCategory(category);
-
-  addGenericInDOM(data);
-  addTitleInDOM(category);
-  musicsFilter.forEach((music, index) => {
-    addMusicInDOM(music);
-  });
-};
-
 const drawTable = () => {
-  invisibleReturn();
-
   clearList();
 
-  let data = {
-    text: "Todos",
-    link: `./all.html`,
-    classList: "active",
-  };
-  addGenericInDOM(data);
-
-  data = {
-    text: "playlist",
-    link: `./playlist.html`,
-    classList: "active",
-  };
-  addGenericInDOM(data);
-  addGenericInDOM({ text: " ⠀⠀⠀⠀⠀⠀⠀⠀ " });
-
-  categories.forEach((category) => {
-    addCategoryInDOM(category);
+  categories.forEach((category, id) => {
+    addCategoryInDOM(category, id);
   });
 };
 
-addCommandInReturn("drawTable()");
+invisibleReturn();
 drawTable();

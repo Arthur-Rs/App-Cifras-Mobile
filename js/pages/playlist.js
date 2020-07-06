@@ -4,33 +4,19 @@
  *@Revision: 02/07/2020
  */
 
-const drawPlaylist = () => {
-  clearList();
-  addTitleInDOM("Playlist");
-  playlist.forEach((list, id) => {
-    const data = { text: list.name, id, fun: `selectPlaylist(${id})` };
-    const btnData = {
-      id,
-      img: "delete",
-      fun: `deletePlaylist(${id})`,
-      _class: "icon",
-    };
-    addGenericInDOM(data, btnData);
-  });
-
-  addCommandInReturn("goBack()");
-};
+const id = location.search.replace("?", "");
 
 const selectPlaylist = (id) => {
+  visibleSearch();
   const { name, musicsId } = playlist[id];
 
   clearList();
   addTitleInDOM(name);
   musicsId.forEach((musicid) => {
+    music = musics.filter((music) => music.id === musicid)[0];
     const functionName = `deleteMusicInPlaylist(${id}, ${musicid})`;
-    addMusicInDOM(musics[musicid], "delete", functionName);
+    addMusicInDOM(music, "delete", functionName);
   });
-  addCommandInReturn("drawPlaylist()");
 };
 
-drawPlaylist();
+selectPlaylist(id);

@@ -7,15 +7,9 @@ const headerHTML = `
   </button>
 
 
-    <button type="button" id="return" class="btn btn-dark icon-header">
-      <img src="images/back.svg" alt="back"/>
+    <button type="button" id="return" onclick="goBack()" class="btn btn-dark icon-header">
+      <img src="images/back.svg" width="16px" height="16px" alt="back"/>
     </button>
-
-  
 </div>
 </nav>
-<div>
-<p>Utilize o Menu para mais informações... Se puder faça uma doação para manter o Aplicativo!  <a href="${donate}" target="_blank"></p>
-<img src="./images/btn_doar.png"></a>
-</div>
 `;

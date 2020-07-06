@@ -7,17 +7,40 @@
     <script src="./js/data/links.js"></script>
     <script src="./js/data/musics.js"></script>
     <script src="./js/data/category.js"></script>
+    <script src="./js/localStorage.js"></script>
     <script src="./js/layout/sideBar.js"></script>
     <script src="./js/layout/header.js"></script>
+    <script src="./js/layout/popup.js"></script>
     <script src="./js/data/alphabet.js"></script>
   </head>
   <body>
     <script src="./js/init.js"></script>
 
-    <ul id="list" class="list-group"></ul>
+    <div class="text-conteiner">
+      <input
+        class="search"
+        type="text"
+        id="search"
+        oninput="HandlerSearch()"
+        placeholder="Pesquisar"
+      />
+    </div>
+
+    <ul class="list-group">
+      <li
+        class="list-group-item active"
+        id="sortBtn"
+        onclick="drawAllMusicsByRecents()"
+      >
+        Músicas recentes
+      </li>
+    </ul>
+
+    <ul style="margin-top: 1% !important;" id="list" class="list-group"></ul>
 
     <script src="./js/utils.js"></script>
     <script src="./js/interface.js"></script>
+    <script src="./js/search.js"></script>
 
     <script src="./js/pages/all.js"></script>
   </body>
