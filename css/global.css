@@ -14,8 +14,9 @@ bory {
   width: 97%;
   padding-left: 2%;
   border: 2px solid var(--primary);
-  font-size: 120%;
-  margin: 9vh 0px -2vw 2vw !important;
+  font-size: 100%;
+  margin: 7vh 0px -1vw 2vw !important;
+  border-radius: 5px;
 }
 input:active {
   outline: none;
@@ -30,4 +31,22 @@ h4 {
 }
 b {
   color: var(--red);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(font/Poppins-Regular.ttf)
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
 }

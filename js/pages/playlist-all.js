@@ -13,10 +13,7 @@ const drawPlaylist = () => {
   };
 
   addGenericInDOM(data, btnData);
-
-  debugger;
   playlist.forEach((list, id) => {
-    debugger;
     const data = {
       text: list.name,
       id,

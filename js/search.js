@@ -5,9 +5,17 @@ const HandlerSearch = () => {
   listMusics.forEach((music) => {
     const musicTitle = treatedString(music.innerText);
     if (musicTitle.indexOf(treatedSearch) === -1) {
-      music.parentElement.style.display = "none";
+      if (music.parentElement.tagName === "LI") {
+        music.parentElement.style.display = "none";
+        return;
+      }
+      music.parentElement.parentElement.style.display = "none";
     } else {
-      music.parentElement.style.display = null;
+      if (music.parentElement.tagName === "LI") {
+        music.parentElement.style.display = null;
+        return;
+      }
+      music.parentElement.parentElement.style.display = null;
     }
   });
 

@@ -6,7 +6,7 @@
 
 // ==> Sort
 const getSortByLetter = (letter) => {
-  return musics.filter((music) => music.name[0] === letter);
+  return musics.filter((music) => treatedString(music.name[0]) === letter);
 };
 
 const getSortByCategory = (category) => {
@@ -14,11 +14,13 @@ const getSortByCategory = (category) => {
 };
 
 const getSortByAlpahabet = (list) => {
-  return list.sort(function (a, b) {
-    if (a.name > b.name) {
+  return list.sort((a, b) => {
+    const nameA = treatedString(a.name);
+    const nameB = treatedString(b.name);
+    if (nameA > nameB) {
       return 1;
     }
-    if (a.name < b.name) {
+    if (nameA < nameB) {
       return -1;
     }
     return 0;

@@ -47,6 +47,8 @@
   margin: 20 !important;
   padding: 0 !important;
   height: 90% !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
 }
 
 .popup-box .popup-line {

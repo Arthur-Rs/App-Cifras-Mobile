@@ -21,14 +21,13 @@ class musicControl {
 
   addMusicInDOM() {
     this.title = document.createElement("title");
-    this.link = document.createElement("a");
+    
     this.content = document.createElement("pre");
 
     this.title = this.data.title_H4;
     this.title.innerHTML = this.music.name;
 
-    this.link = this.data.link_A;
-    this.link.innerHTML = this.music.link;
+    
 
     this.content = this.data.content_Pre;
     this.content.innerHTML = this.music.conteudo;

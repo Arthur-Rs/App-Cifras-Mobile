@@ -12,5 +12,5 @@ const drawTable = () => {
   });
 };
 
-invisibleReturn();
+invisibleSearch();
 drawTable();

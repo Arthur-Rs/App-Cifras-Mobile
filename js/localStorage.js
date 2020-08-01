@@ -1,8 +1,8 @@
-/*@ ============================================== *\
- * @Author: Arthur Reis <arthurreis074@gmail.com>  *
- * @Version: 1.0                                   *
- * @Revision: 02/07/2020                           *
-\* =============================================  **/
+/*
+ * @Author: Arthur Reis <arthurreis074@gmail.com>
+ * @Version: 1.1
+ * @Revision: 10/07/2020
+ */
 
 // ==== Playlist ==== \\
 
@@ -37,6 +37,32 @@ const refreshMusicPlaylist = (id) => {
 
 const createNewPlaylist = (id) => {
   const name = prompt("Escolha o nome da playlist: ");
+
+  if (name === null) {
+    return;
+  }
+
+  if (name.trim() === "") {
+    alert("Você precisa escolher um nome para sua playlist");
+    createNewPlaylist(id);
+    return;
+  }
+
+  let nameExist = false;
+
+  playlist.forEach((list) => {
+    if (list.name === name) {
+      nameExist = true;
+      return;
+    }
+  });
+
+  if (nameExist) {
+    alert("Essa playlist já existe!");
+    createNewPlaylist(id);
+    return;
+  }
+
   playlist.push({ name, musicsId: [] });
   try {
     drawPlaylist();
@@ -60,6 +86,12 @@ const addInPlaylist = (idlist, idmusic) => {
 };
 
 const deleteMusicInPlaylist = (idlist, idmusic) => {
+  const confirmDelete = confirm("Deseja realmente deletar essa música?");
+
+  if (!confirmDelete) {
+    return;
+  }
+
   const indexMusic = playlist[idlist].musicsId.indexOf(idmusic);
   playlist[idlist].musicsId.splice(indexMusic, 1);
   refreshMusicPlaylist(idlist);
@@ -67,6 +99,12 @@ const deleteMusicInPlaylist = (idlist, idmusic) => {
 };
 
 const deletePlaylist = (idlist) => {
+  const confirmDelete = confirm("Deseja realmente deletar essa playlist?");
+
+  if (!confirmDelete) {
+    return;
+  }
+
   playlist.splice(idlist, 1);
   drawPlaylist();
   setPlaylist();
